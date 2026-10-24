@@ -6,3 +6,4 @@ export class CreateReportDto {
   @IsString() @IsNotEmpty() severity: string;
   @IsString() @IsNotEmpty() phone: string;
 }
+
