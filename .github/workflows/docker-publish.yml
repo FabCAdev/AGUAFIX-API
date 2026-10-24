@@ -14,11 +14,12 @@ jobs:
       - name: Login en Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.fabca06 }}
-          
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Construir y Publicar Imagen
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/aguafix-api:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/aguafix-api:latest
